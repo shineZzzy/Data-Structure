@@ -18,7 +18,7 @@ class ListNode{
        this.val = val; this.next = next;
    }
 }
-public class addNumber {
+public class addTowNum2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head=new ListNode(0);
         ListNode cur=head;

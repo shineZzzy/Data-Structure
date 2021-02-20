@@ -1,6 +1,6 @@
 package Test.Day40;
 
-public class addNum {
+public class addTowNum {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //创建新链表的伪头节点
         ListNode head=new ListNode(0);
