@@ -7,7 +7,7 @@ import LeetCode1.EveryDAY.Week3.TreeNode;
  * TIP：二叉树的直径=左子树最大深度+右子树最大深度
  * 链接：https://leetcode-cn.com/problems/diameter-of-binary-tree/
  */
-public class T543 {
+public class T543{
     public int res=0;
     public int diameterOfBinaryTree(TreeNode root) {
         if(root==null){
