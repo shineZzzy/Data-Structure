@@ -2,7 +2,7 @@ package LeetCode1.EveryDAY.Week3.maxPath;
 
 import LeetCode1.EveryDAY.Week3.TreeNode;
 
-public class T124 {
+public class T124{
     int res=Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         if(root==null){
