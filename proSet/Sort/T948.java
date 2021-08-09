@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 先对数组整体排序，贪心思想，前面的牌翻正面，后面的牌翻反面，当前后指针相遇时，即退出
  * 链接：https://leetcode-cn.com/problems/bag-of-tokens/
  */
-public class T948 {
+public class T948{
     public static int bagOfTokensScore(int[] tokens, int power) {
         int len=tokens.length;
         Arrays.sort(tokens);
