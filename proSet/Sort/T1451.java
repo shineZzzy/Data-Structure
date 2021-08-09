@@ -9,7 +9,7 @@ import java.util.Comparator;
  * 竟然在首字母转换的地方坎坷了.....
  * 链接：https://leetcode-cn.com/problems/rearrange-words-in-a-sentence/
  */
-public class T1451 {
+public class T1451  {
     public static String arrangeWords(String text) {
 
         String[] str= text.toLowerCase().split(" ");
