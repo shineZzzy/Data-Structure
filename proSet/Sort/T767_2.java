@@ -5,7 +5,7 @@ package Sort.T767_;
  * 技术排序、奇数偶数位插空排列
  * 链接：https://leetcode-cn.com/problems/reorganize-string/
  */
-public class T767_2 {
+public class T767{
     public static String reorganizeString(String s) {
         int len= s.length();
         char[] c= s.toCharArray();
