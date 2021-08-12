@@ -4,7 +4,7 @@ package SuanFa.Tanxin.T134;
  * 链接：https://leetcode-cn.com/problems/gas-station/
  */
 
-public class T134_1 {
+public class T134_1{
     public static int canCompleteCircuit(int[] gas, int[] cost) {
         int n=gas.length;
         //优化：当以i为出发点时，在j站点处失败了，
