@@ -1,47 +1,30 @@
-package LeetCode.奇安信.T1;
+package LeetCode.恒生电子.T1;
 
-import java.util.HashSet;
-import java.util.Set;
-
-/**
- * 最长连续子序列
- */
 public class Main {
-
     public static void main(String[] args) {
-//        int[] nums={20,40,41,41,21,22};
-        int[] nums={20,20,20};
-        System.out.println(MALS(nums));
-    }
-    public static int MALS (int[] members) {
-        int len=members.length;
-        if (len==0){
-            return 0;
-        }
-
-        Set<Integer> set=new HashSet<>();
-        for (int i : members) {
-            set.add(i);
-        }
-
-        int max=0;
-
-        for (int i = 0; i < len; i++) {
-            int index=i;
-            int temp=members[i]-1;
-            if (set.contains(temp)){
-                continue;
+        int triangle[][] = new int[12][];//创建一个二维数组来存储杨辉三角形
+        for (int i = 0; i < 12; i++) {
+            //确定每一行数组的长度
+            triangle[i] = new int[i+1];
+            //得到杨辉三角形的值
+            triangle[i][0] = 1;
+            triangle[i][i] = 1;
+            if(i>1){
+                for (int j = 1; j < i; j++) {
+                    triangle[i][j] = triangle[i-1][j-1]+triangle[i-1][j];
+                }
             }
-            temp=members[i]+1;
-            while (set.contains(temp)){
-                index++;
-                temp++;
-
+        }
+        //输出与格式规范
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 9-i; j++) {
+                System.out.print("  ");
             }
-            int v=index-i+1;
-            max=Math.max(max,v);
+            for (int j = 0; j < i+1; j++) {
+                System.out.printf("%4d",triangle[i][j]);
+            }
+            System.out.println(" ");
         }
 
-        return  max;
     }
 }
