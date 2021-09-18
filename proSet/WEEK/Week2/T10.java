@@ -1,18 +1,63 @@
-package LeetCode.剑指offer.Week2;
+package Sloution;
 
 /**
- * 斐波那契数列
- * 链接：https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
+ * 打印直方图
  */
 public class T10 {
-    public int fib(int n) {
+    public static void main(String[] args) {
+        String[] str={"aaaaa","b","c"};
+        int[] nums={3,5,4};
+        printStr(str,nums);
+    }
 
-        int a = 0, b = 1, sum;
-        for(int i = 0; i < n; i++){
-            sum = (a + b) % 1000000007;
-            a = b;
-            b = sum;
+    private static void printStr(String[] str, int[] nums) {
+        int[] len=new int[str.length];
+        int index=0;
+        for (String s : str) {
+            len[index++]=s.length();
         }
-        return a;
+        int n=nums.length;
+        int max=nums[0];
+        for (int i = 1; i < n; i++) {
+            if (nums[i]>max){
+                max=nums[i];
+            }
+        }
+        int[] cha=new int[n];
+        for(int i=0;i<n;i++){
+            cha[i]=max-nums[i];
+        }
+
+        for(int i=0;i<max;i++){
+           for(int j=0;j<n;j++){
+               if (cha[j]>0){
+                   System.out.print(" ");
+                   for(int k=0;k<len[j];k++){
+                       System.out.print(" ");
+                   }
+                   cha[j]--;
+               }else {
+                   System.out.print("#");
+                   for(int k=0;k<len[j];k++){
+                       System.out.print(" ");
+                   }
+               }
+           }
+            System.out.println();
+        }
+        int x=0;
+        for (int i : len) {
+            x+=i;
+        }
+        for (int i = 0; i < x; i++) {
+            System.out.print("--");
+
+        }
+        System.out.println();
+        for (String s : str) {
+            System.out.print(s+" ");
+        }
+
+
     }
 }
